@@ -30,7 +30,7 @@ const AddCarPage = () => {
 
     const token= (localStorage.getItem("token"))
 
-    const response= await axios.post('http://localhost:5050/api/car/addCarDetails',{...value,token},{
+    const response= await axios.post('https://sellmycar-atrryb.onrender.com/api/car/addCarDetails',{...value,token},{
       headers:{
         Authorization : "Bearer " + localStorage.getItem('token')
       }

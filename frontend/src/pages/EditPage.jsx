@@ -14,7 +14,7 @@ const EditPage = () => {
   const handleDelete=async(carId)=>{
     console.log("inDelete")
     try {
-      const res= await axios.delete(`http://localhost:5050/api/car/removecar/${carId}`,{
+      const res= await axios.delete(`https://sellmycar-atrryb.onrender.com/api/car/removecar/${carId}`,{
         headers:{
           Authorization : "Bearer " + localStorage.getItem('token')
         }
@@ -41,7 +41,7 @@ const EditPage = () => {
   const handleSubmit =async(value)=>{
  
     try {
-      const response= await axios.put('http://localhost:5050/api/car/updatecardetails',{...value,_id:carToBeEdit._id},{
+      const response= await axios.put('https://sellmycar-atrryb.onrender.com/api/car/updatecardetails',{...value,_id:carToBeEdit._id},{
         headers:{
           Authorization : "Bearer " + localStorage.getItem('token')
         }
@@ -61,7 +61,7 @@ const EditPage = () => {
 
   const getData=async()=>{
       
-    const response= await axios.get('http://localhost:5050/api/car/carsbydealers',{
+    const response= await axios.get('https://sellmycar-atrryb.onrender.com/api/car/carsbydealers',{
       headers:{
         Authorization : "Bearer " + localStorage.getItem('token')
       }

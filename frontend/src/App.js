@@ -17,7 +17,7 @@ function App() {
 
 
   useEffect(() => {
-    axios.get('http://localhost:5050/api/car/oemspecs').then(
+    axios.get('https://sellmycar-atrryb.onrender.com/api/car/oemspecs').then(
      res=> setOemdata(res.data.allOemCars)
    )
    

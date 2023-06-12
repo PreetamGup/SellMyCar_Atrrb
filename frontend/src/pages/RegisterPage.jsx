@@ -16,7 +16,7 @@ const RegisterPage = () => {
                 password: e.target.password.value
             }
     
-            const resposnse= await axios.post("http://localhost:5050/api/user/register", {...obj})
+            const resposnse= await axios.post("https://sellmycar-atrryb.onrender.com/api/user/register", {...obj})
             
             if(resposnse.data.success){
                 window.alert(resposnse.data.message)
